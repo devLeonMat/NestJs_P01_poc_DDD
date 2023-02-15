@@ -1,12 +1,24 @@
-import { IsNumber, IsString } from "class-validator";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class PatientResponseDto {
+  @ApiProperty()
+  id: string;
 
-    id: string;
-    firstName: string
-    lastName: string
-    email: string
-    gender: string
-    age: number
-    height: number
+  @ApiProperty()
+  firstName: string
+
+  @ApiProperty()
+  lastName: string
+
+  @ApiProperty()
+  email: string
+
+  @ApiProperty()
+  gender: string
+
+  @ApiProperty()
+  age: number
+
+  @ApiProperty()
+  height: number
 }

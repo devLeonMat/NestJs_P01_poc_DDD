@@ -1,6 +1,4 @@
 import {Module} from '@nestjs/common';
-import {AppController} from './app.controller';
-import {AppService} from './app.service';
 import {MongooseModule} from "@nestjs/mongoose";
 import {PatientModule} from "./patient/patient.module";
 import {PatientSchema} from "./patient/persistence/schemas/patients";
@@ -12,8 +10,8 @@ import {PatientSchema} from "./patient/persistence/schemas/patients";
         MongooseModule.forFeature([{ name: 'patients', schema: PatientSchema }]),
         PatientModule
     ],
-    controllers: [AppController],
-    providers: [AppService],
+    controllers: [],
+    providers: [],
 })
 export class AppModule {
 }
